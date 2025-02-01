@@ -28,9 +28,20 @@
         }
     </script>
     <style>
-        nai{
-            display: none;
-        }
+        @keyframes customAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-custom {
+  animation: customAnimation 2s ease-in-out;
+}
     </style>
 </head>
 <body class="">
@@ -52,7 +63,7 @@
 
             <!-- Login and Register Buttons -->
             <div class="hidden md:flex items-center space-x-4">
-                <i class="fa-regular fa-bell"></i>
+                <i class="fa-regular fa-bell motion-safe:animate-spin"></i>
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <button class="border border-[#FFDC26] px-4 py-1 rounded-lg">Login</button>
                 <button class="bg-[#FFDC26] px-4 py-1 rounded-lg text-white">Register</button>
@@ -70,17 +81,17 @@
      <main class="max-w-[1240px] mx-auto px-4">
         <!-- Hero Section -->
     <section class="mt-[-90px] md:mt-0 relative w-full h-[600px] bg-no-repeat bg-right-bottom" 
-    style="background-image: url('./images/cat-big.png'); background-size: contain;">
+    style=" background-image: url('./images/cat-big.png'); background-size: contain;">
     <div class="flex items-center h-full">
         <div class="max-w-lg md:w-1/2">
-            <h1 class=" font-Adam text-4xl md:text-5xl font-normal  text-[#111111] leading-tight">
+            <h1 class="animate-pulse font-Adam text-4xl md:text-5xl font-normal  text-[#111111] leading-tight">
                 Pamper Your Pet, <br> Because They Deserve <br> the Best
             </h1>
             <p class="font-Sora font-normal text-[#111111] mt-4 text-[15px]">
                 Discover a world of treats, toys, and essentials handpicked for your furry friends. 
                 Shop now and make tails wag with joy!
             </p>
-            <button class="mt-6 bg-[#FFDC26] px-8 py-2 text-[#111111] font-semi rounded-md shadow-md">
+            <button class="animate-bounce mt-6 bg-[#FFDC26] px-8 py-2 text-[#111111] font-semi rounded-md shadow-md">
                 Find a pet
             </button>
         </div>
